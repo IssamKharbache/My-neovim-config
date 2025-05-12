@@ -144,7 +144,6 @@ return {
             { "<leader>gl", function() require("snacks").lazygit.log() end, desc = "Lazygit Logs" },
             { "<leader>rN", function() require("snacks").rename.rename_file() end, desc = "Fast Rename Current File" },
             { "<leader>dB", function() require("snacks").bufdelete() end, desc = "Delete or Close Buffer  (Confirm)" },
-
             -- Snacks Picker
             { "<leader>pf", function() require("snacks").picker.files() end, desc = "Find Files (Snacks Picker)" },
             { "<leader>pc", function() require("snacks").picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
