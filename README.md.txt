@@ -1,0 +1,2 @@
+--packs to install :
+ -gitlazy
