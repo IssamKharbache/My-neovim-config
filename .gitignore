@@ -33,4 +33,4 @@ session/
 nvim-data/
 
 # Ignore the theme persistence file
-lua/plugins/current-theme.lua
+lua/current-theme.lua
