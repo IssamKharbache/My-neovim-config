@@ -14,7 +14,7 @@ return {
                     { section = "startup" },
                     {
                       section = "terminal",
-                      cmd = "ascii-image-converter ~/Downloads/image.jpg",
+                      cmd = "ascii-image-converter ~/Downloads/image.jpg --color",
                       random = 10,
                       pane = 2,
                       indent = 4,
