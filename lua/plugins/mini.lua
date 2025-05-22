@@ -93,8 +93,8 @@ return {
             silent = false,
         },
     },
-    -- Get rid of whitespace
-    {
+    -- Get rid of whitespace          
+     {
         "echasnovski/mini.trailspace",
         event = { "BufReadPost", "BufNewFile" },
         config = function()
@@ -120,8 +120,9 @@ return {
         config = function()
             local miniSplitJoin = require("mini.splitjoin")
             miniSplitJoin.setup({
-                mappings = { toggle = "" }, -- Disable default mapping
-            })
+                mappings = {
+                    toggle = "" --Disable default mapping 
+     },})
             vim.keymap.set({ "n", "x" }, "sj", function() miniSplitJoin.join() end, { desc = "Join arguments" })
             vim.keymap.set({ "n", "x" }, "sk", function() miniSplitJoin.split() end, { desc = "Split arguments" })
         end,

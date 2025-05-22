@@ -91,3 +91,18 @@ vim.keymap.set("n", "<leader>lx", function()
     })
 end, { desc = "Toggle LSP diagnostics" })
 
+-- Show all active keymaps in a scratch buffer
+vim.api.nvim_create_user_command("MyKeymaps", function()
+  local output = {}
+  for _, mode in ipairs({ "n", "i", "v", "x", "s", "o", "t", "c" }) do
+    table.insert(output, "== MODE: " .. mode .. " ==")
+    for _, map in ipairs(vim.api.nvim_get_keymap(mode)) do
+      table.insert(output, string.format("  %s → %s", map.lhs, map.rhs))
+    end
+    table.insert(output, "")
+  end
+  vim.cmd("new")
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
+  vim.cmd("setlocal buftype=nofile bufhidden=wipe nobuflisted")
+end, {})
+
