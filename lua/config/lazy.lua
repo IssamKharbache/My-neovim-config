@@ -21,6 +21,7 @@ vim.cmd([[autocmd VimEnter * lua require("snacks").dashboard()]])
 require("lazy").setup({
   spec = {
     { import = "plugins" },
+    { import = "plugins.lsp" },
   },
   install = { colorscheme = { "habamax" } },
   checker = { enabled = true },
